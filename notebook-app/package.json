@@ -1,0 +1,42 @@
+{
+  "name": "notebook-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cra-template": "1.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.28.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:client": "cross-env HOST=dev.notebookapp.com PORT=3003 env-cmd -f .env.client react-scripts start",
+    "start:admin": "cross-env HOST=dev.notebookapp.com PORT=3003 env-cmd -f .env.admin react-scripts start",
+    "build:client": "cross-env HOST=dev.notebookapp.com PORT=3003 env-cmd -f .env.client react-scripts build",
+    "build:admin": "cross-env HOST=dev.notebookapp.com PORT=3003 env-cmd -f .env.admin PORT=3003 react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "env-cmd": "^10.1.0"
+  }
+}
